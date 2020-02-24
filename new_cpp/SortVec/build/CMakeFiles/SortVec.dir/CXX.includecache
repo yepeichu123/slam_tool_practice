@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xiaoc/xiaoc/code/tool_practice/new_cpp/SortVec/main.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+

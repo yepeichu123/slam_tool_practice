@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -O3 -DNDEBUG   CMakeFiles/ReadTrajectory.dir/src/main.cpp.o CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.o CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.o  -o ../bin/ReadTrajectory -rdynamic 
