@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/src/ReadPointsFromImg.cpp
+iostream
+-
+
