@@ -1,5 +1,5 @@
-/home/xiaoc/xiaoc/code/tool_practice/opencv_practice/RenameSequence/build/CMakeFiles/edit_cache.dir
-/home/xiaoc/xiaoc/code/tool_practice/opencv_practice/RenameSequence/build/CMakeFiles/rebuild_cache.dir
-/home/xiaoc/xiaoc/code/tool_practice/opencv_practice/RenameSequence/build/CMakeFiles/RenameSequence.dir
-/home/xiaoc/xiaoc/code/tool_practice/opencv_practice/RenameSequence/build/src/CMakeFiles/edit_cache.dir
-/home/xiaoc/xiaoc/code/tool_practice/opencv_practice/RenameSequence/build/src/CMakeFiles/rebuild_cache.dir
+/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/RenameSequence/build/CMakeFiles/edit_cache.dir
+/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/RenameSequence/build/CMakeFiles/rebuild_cache.dir
+/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/RenameSequence/build/CMakeFiles/RenameSequence.dir
+/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/RenameSequence/build/src/CMakeFiles/edit_cache.dir
+/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/RenameSequence/build/src/CMakeFiles/rebuild_cache.dir

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory
+CMAKE_SOURCE_DIR = /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/build
+CMAKE_BINARY_DIR = /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ReadTrajectory.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ReadTrajectory.dir/flags.make
 
 CMakeFiles/ReadTrajectory.dir/src/main.cpp.o: CMakeFiles/ReadTrajectory.dir/flags.make
 CMakeFiles/ReadTrajectory.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ReadTrajectory.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReadTrajectory.dir/src/main.cpp.o -c /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ReadTrajectory.dir/src/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReadTrajectory.dir/src/main.cpp.o -c /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/main.cpp
 
 CMakeFiles/ReadTrajectory.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ReadTrajectory.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/main.cpp > CMakeFiles/ReadTrajectory.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/main.cpp > CMakeFiles/ReadTrajectory.dir/src/main.cpp.i
 
 CMakeFiles/ReadTrajectory.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ReadTrajectory.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/main.cpp -o CMakeFiles/ReadTrajectory.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/main.cpp -o CMakeFiles/ReadTrajectory.dir/src/main.cpp.s
 
 CMakeFiles/ReadTrajectory.dir/src/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ReadTrajectory.dir/src/main.cpp.o.provides.build: CMakeFiles/ReadTraj
 
 CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.o: CMakeFiles/ReadTrajectory.dir/flags.make
 CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.o: ../src/ReadTrajectory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.o -c /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.o -c /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.cpp
 
 CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.cpp > CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.cpp > CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.i
 
 CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.cpp -o CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.cpp -o CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.s
 
 CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.o.provides.build: CMakeFile
 
 CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.o: CMakeFiles/ReadTrajectory.dir/flags.make
 CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.o: ../src/CamPose.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.o -c /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/CamPose.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.o -c /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/CamPose.cpp
 
 CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/CamPose.cpp > CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/CamPose.cpp > CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.i
 
 CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/CamPose.cpp -o CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/CamPose.cpp -o CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.s
 
 CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.o.requires:
 
@@ -143,7 +143,7 @@ ReadTrajectory_EXTERNAL_OBJECTS =
 ../bin/ReadTrajectory: CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.o
 ../bin/ReadTrajectory: CMakeFiles/ReadTrajectory.dir/build.make
 ../bin/ReadTrajectory: CMakeFiles/ReadTrajectory.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../bin/ReadTrajectory"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../bin/ReadTrajectory"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ReadTrajectory.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -162,6 +162,6 @@ CMakeFiles/ReadTrajectory.dir/clean:
 .PHONY : CMakeFiles/ReadTrajectory.dir/clean
 
 CMakeFiles/ReadTrajectory.dir/depend:
-	cd /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/build /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/build /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/build/CMakeFiles/ReadTrajectory.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/build /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/build /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/build/CMakeFiles/ReadTrajectory.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ReadTrajectory.dir/depend
 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xiaoc/xiaoc/code/tool_practice/new_cpp/SortVec/main.cpp
+/home/ypc/xiaoc/code/slam_tool_practice/new_cpp/SortVec/main.cpp
 iostream
 -
 vector

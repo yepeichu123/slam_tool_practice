@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/DedistortionImg
+CMAKE_SOURCE_DIR = /home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/DedistortionImg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/DedistortionImg/build
+CMAKE_BINARY_DIR = /home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/DedistortionImg/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/DedistortionImg.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/Dedistor
 CMakeFiles/DedistortionImg.dir/all:
 	$(MAKE) -f CMakeFiles/DedistortionImg.dir/build.make CMakeFiles/DedistortionImg.dir/depend
 	$(MAKE) -f CMakeFiles/DedistortionImg.dir/build.make CMakeFiles/DedistortionImg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xiaoc/xiaoc/code/tool_practice/opencv_practice/DedistortionImg/build/CMakeFiles --progress-num=1,2 "Built target DedistortionImg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/DedistortionImg/build/CMakeFiles --progress-num=1,2 "Built target DedistortionImg"
 .PHONY : CMakeFiles/DedistortionImg.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/DedistortionImg.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DedistortionImg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/DedistortionImg/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/DedistortionImg/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/DedistortionImg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/DedistortionImg/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/DedistortionImg/build/CMakeFiles 0
 .PHONY : CMakeFiles/DedistortionImg.dir/rule
 
 # Convenience name for target.

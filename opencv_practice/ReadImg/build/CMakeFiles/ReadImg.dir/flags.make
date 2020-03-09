@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11 -O3 -DNDEBUG
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /usr/local/include -isystem /usr/local/include/opencv -I/home/xiaoc/xiaoc/code/tool_practice/opencv_practice/ReadImg/include 
+CXX_INCLUDES = -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev -isystem /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/ReadImg/include 
 

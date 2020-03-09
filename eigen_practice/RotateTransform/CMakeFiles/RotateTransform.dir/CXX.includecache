@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/RotateTransform/src/RotateTransform.cpp
+RotateTransform.h
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/RotateTransform/src/RotateTransform.h
+iostream
+-
+
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/RotateTransform/src/main.cpp
+iostream
+-
+cmath
+-
+RotateTransform.h
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/RotateTransform/src/RotateTransform.h
+
+include/RotateTransform.h
+eigen3/Eigen/Core
+-
+eigen3/Eigen/Geometry
+-
+

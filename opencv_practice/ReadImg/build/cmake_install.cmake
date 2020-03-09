@@ -1,4 +1,4 @@
-# Install script for directory: /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/ReadImg
+# Install script for directory: /home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/ReadImg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/xiaoc/xiaoc/code/tool_practice/opencv_practice/ReadImg/build/src/cmake_install.cmake")
+  include("/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/ReadImg/build/src/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/xiaoc/xiaoc/code/tool_practice/opencv_practice/ReadImg/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/ReadImg/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

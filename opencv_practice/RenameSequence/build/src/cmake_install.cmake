@@ -1,4 +1,4 @@
-# Install script for directory: /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/RenameSequence/src
+# Install script for directory: /home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/RenameSequence/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

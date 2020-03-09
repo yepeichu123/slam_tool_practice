@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xiaoc/xiaoc/code/tool_practice/new_cpp/SortVec/main.cpp" "/home/xiaoc/xiaoc/code/tool_practice/new_cpp/SortVec/build/CMakeFiles/SortVec.dir/main.cpp.o"
+  "/home/ypc/xiaoc/code/slam_tool_practice/new_cpp/SortVec/main.cpp" "/home/ypc/xiaoc/code/slam_tool_practice/new_cpp/SortVec/build/CMakeFiles/SortVec.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

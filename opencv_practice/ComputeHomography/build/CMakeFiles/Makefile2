@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/ComputeHomography
+CMAKE_SOURCE_DIR = /home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/ComputeHomography
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/ComputeHomography/build
+CMAKE_BINARY_DIR = /home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/ComputeHomography/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/ComputeHomography.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/ComputeH
 CMakeFiles/ComputeHomography.dir/all:
 	$(MAKE) -f CMakeFiles/ComputeHomography.dir/build.make CMakeFiles/ComputeHomography.dir/depend
 	$(MAKE) -f CMakeFiles/ComputeHomography.dir/build.make CMakeFiles/ComputeHomography.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xiaoc/xiaoc/code/tool_practice/opencv_practice/ComputeHomography/build/CMakeFiles --progress-num=1,2 "Built target ComputeHomography"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/ComputeHomography/build/CMakeFiles --progress-num=1,2 "Built target ComputeHomography"
 .PHONY : CMakeFiles/ComputeHomography.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/ComputeHomography.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ComputeHomography.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/ComputeHomography/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/ComputeHomography/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ComputeHomography.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xiaoc/xiaoc/code/tool_practice/opencv_practice/ComputeHomography/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/ComputeHomography/build/CMakeFiles 0
 .PHONY : CMakeFiles/ComputeHomography.dir/rule
 
 # Convenience name for target.

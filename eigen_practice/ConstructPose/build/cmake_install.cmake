@@ -1,4 +1,4 @@
-# Install script for directory: /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ConstructPose
+# Install script for directory: /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ConstructPose
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ConstructPose/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ConstructPose/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

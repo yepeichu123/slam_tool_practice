@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg
+CMAKE_SOURCE_DIR = /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/build
+CMAKE_BINARY_DIR = /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ReadPointsFromImg.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ReadPointsFromImg.dir/flags.make
 
 CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.o: CMakeFiles/ReadPointsFromImg.dir/flags.make
 CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.o: ../src/ReadPointsFromImg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.o -c /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/src/ReadPointsFromImg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.o -c /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg/src/ReadPointsFromImg.cpp
 
 CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/src/ReadPointsFromImg.cpp > CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg/src/ReadPointsFromImg.cpp > CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.i
 
 CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/src/ReadPointsFromImg.cpp -o CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg/src/ReadPointsFromImg.cpp -o CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.s
 
 CMakeFiles/ReadPointsFromImg.dir/src/ReadPointsFromImg.cpp.o.requires:
 
@@ -134,21 +134,20 @@ ReadPointsFromImg_EXTERNAL_OBJECTS =
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_sample_consensus.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_filters.so
 ../bin/ReadPointsFromImg: /usr/lib/libOpenNI.so
-../bin/ReadPointsFromImg: /usr/lib/libOpenNI2.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_io.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_features.so
-../bin/ReadPointsFromImg: /usr/local/lib/libpcl_registration.so
-../bin/ReadPointsFromImg: /usr/local/lib/libpcl_ml.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_keypoints.so
+../bin/ReadPointsFromImg: /usr/local/lib/libpcl_ml.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_segmentation.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_visualization.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_outofcore.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_stereo.so
-../bin/ReadPointsFromImg: /usr/local/lib/libpcl_people.so
 ../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libqhull.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_surface.so
-../bin/ReadPointsFromImg: /usr/local/lib/libpcl_recognition.so
+../bin/ReadPointsFromImg: /usr/local/lib/libpcl_registration.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_tracking.so
+../bin/ReadPointsFromImg: /usr/local/lib/libpcl_recognition.so
+../bin/ReadPointsFromImg: /usr/local/lib/libpcl_people.so
 ../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libboost_system.so
 ../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -161,8 +160,48 @@ ReadPointsFromImg_EXTERNAL_OBJECTS =
 ../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libpthread.so
 ../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libqhull.so
 ../bin/ReadPointsFromImg: /usr/lib/libOpenNI.so
-../bin/ReadPointsFromImg: /usr/lib/libOpenNI2.so
 ../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkImagingStencil-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOSQL-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtksqlite-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersProgrammable-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersHyperTree-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingVolumeOpenGL2-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkImagingMath-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersParallelImaging-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOMINC-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOVideo-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkGeovisCore-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkproj4-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOParallel-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIONetCDF-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkjsoncpp-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOLSDyna-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOMovie-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOExodus-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingContextOpenGL2-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersGeneric-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOEnSight-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkViewsContext2D-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkDomainsChemistryOpenGL2-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkDomainsChemistry-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOTecplotTable-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersVerdict-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkverdict-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersFlowPaths-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersSelection-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOInfovis-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingImage-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkInteractionImage-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkImagingMorphological-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersPoints-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkImagingStatistics-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOAMR-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersSMP-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkViewsInfovis-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkChartsCore-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOParallelXML-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOImport-7.1.so.1
 ../bin/ReadPointsFromImg: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
 ../bin/ReadPointsFromImg: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
 ../bin/ReadPointsFromImg: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1
@@ -176,6 +215,12 @@ ReadPointsFromImg_EXTERNAL_OBJECTS =
 ../bin/ReadPointsFromImg: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_highgui3.so.3.3.1
 ../bin/ReadPointsFromImg: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videoio3.so.3.3.1
 ../bin/ReadPointsFromImg: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_viz3.so.3.3.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingLOD-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOPLY-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOExport-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingGL2PSOpenGL2-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkgl2ps-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersTexture-7.1.so.1
 ../bin/ReadPointsFromImg: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_phase_unwrapping3.so.3.3.1
 ../bin/ReadPointsFromImg: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_flann3.so.3.3.1
 ../bin/ReadPointsFromImg: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1
@@ -190,19 +235,88 @@ ReadPointsFromImg_EXTERNAL_OBJECTS =
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_filters.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_io.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_features.so
-../bin/ReadPointsFromImg: /usr/local/lib/libpcl_registration.so
-../bin/ReadPointsFromImg: /usr/local/lib/libpcl_ml.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_keypoints.so
+../bin/ReadPointsFromImg: /usr/local/lib/libpcl_ml.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_segmentation.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_visualization.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_outofcore.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_stereo.so
-../bin/ReadPointsFromImg: /usr/local/lib/libpcl_people.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_surface.so
-../bin/ReadPointsFromImg: /usr/local/lib/libpcl_recognition.so
+../bin/ReadPointsFromImg: /usr/local/lib/libpcl_registration.so
 ../bin/ReadPointsFromImg: /usr/local/lib/libpcl_tracking.so
+../bin/ReadPointsFromImg: /usr/local/lib/libpcl_recognition.so
+../bin/ReadPointsFromImg: /usr/local/lib/libpcl_people.so
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersParallel-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOGeometry-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkoggtheora-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkexoIIc-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkNetCDF_cxx-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkNetCDF-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingOpenGL2-7.1.so.1
+../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libSM.so
+../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libICE.so
+../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libX11.so
+../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libXext.so
+../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libXt.so
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkglew-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtklibxml2-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkhdf5_hl-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkhdf5-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersAMR-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkInfovisLayout-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkViewsCore-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkInteractionWidgets-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersModeling-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkImagingHybrid-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersHybrid-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingVolume-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkInteractionStyle-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingAnnotation-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkImagingColor-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersImaging-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkImagingGeneral-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkImagingSources-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingLabel-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkInfovisCore-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersExtraction-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersStatistics-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkImagingFourier-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkImagingCore-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkalglib-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingContext2D-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingFreeType-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkfreetype-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOXML-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOXMLParser-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkexpat-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkParallelCore-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOLegacy-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOCore-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkRenderingCore-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkCommonColor-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersGeometry-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersSources-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersGeneral-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkCommonComputationalGeometry-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkFiltersCore-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkIOImage-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkCommonExecutionModel-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkCommonDataModel-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkCommonTransforms-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkCommonMisc-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkCommonMath-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkCommonSystem-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkCommonCore-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtksys-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkDICOMParser-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkmetaio-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkpng-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtktiff-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkjpeg-7.1.so.1
+../bin/ReadPointsFromImg: /usr/local/lib/libvtkzlib-7.1.so.1
+../bin/ReadPointsFromImg: /usr/lib/x86_64-linux-gnu/libm.so
 ../bin/ReadPointsFromImg: CMakeFiles/ReadPointsFromImg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/ReadPointsFromImg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/ReadPointsFromImg"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ReadPointsFromImg.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -219,6 +333,6 @@ CMakeFiles/ReadPointsFromImg.dir/clean:
 .PHONY : CMakeFiles/ReadPointsFromImg.dir/clean
 
 CMakeFiles/ReadPointsFromImg.dir/depend:
-	cd /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/build /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/build /home/xiaoc/xiaoc/code/tool_practice/pcl_practice/ReadPointsFromImg/build/CMakeFiles/ReadPointsFromImg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg/build /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg/build /home/ypc/xiaoc/code/slam_tool_practice/pcl_practice/ReadPointsFromImg/build/CMakeFiles/ReadPointsFromImg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ReadPointsFromImg.dir/depend
 

@@ -26,13 +26,13 @@ eigen3/Eigen/Geometry
 CamPose.h
 ../include/CamPose.h
 
-/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/CamPose.cpp
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/CamPose.cpp
 CamPose.h
-/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/CamPose.h
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/CamPose.h
 
-/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.cpp
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.cpp
 ReadTrajectory.h
-/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.h
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.h
 iostream
 -
 fstream
@@ -40,9 +40,9 @@ fstream
 sstream
 -
 
-/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/main.cpp
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/main.cpp
 ReadTrajectory.h
-/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.h
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.h
 iostream
 -
 memory

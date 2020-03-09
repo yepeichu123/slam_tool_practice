@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ConstructPose/ConstructPose.cpp
+/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ConstructPose/ConstructPose.cpp
 iostream
 -
 cmath

@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11 -O3 -DNDEBUG
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/include -I/usr/include/eigen3 
+CXX_INCLUDES = -I/home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/include -I/usr/include/eigen3 
 

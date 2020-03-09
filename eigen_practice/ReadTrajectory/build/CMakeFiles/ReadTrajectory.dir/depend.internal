@@ -3,12 +3,12 @@
 
 CMakeFiles/ReadTrajectory.dir/src/CamPose.cpp.o
  ../include/CamPose.h
- /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/CamPose.cpp
+ /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/CamPose.cpp
 CMakeFiles/ReadTrajectory.dir/src/ReadTrajectory.cpp.o
  ../include/CamPose.h
  ../include/ReadTrajectory.h
- /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.cpp
+ /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/ReadTrajectory.cpp
 CMakeFiles/ReadTrajectory.dir/src/main.cpp.o
  ../include/CamPose.h
  ../include/ReadTrajectory.h
- /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src/main.cpp
+ /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src/main.cpp

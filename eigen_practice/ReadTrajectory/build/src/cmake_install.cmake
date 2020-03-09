@@ -1,4 +1,4 @@
-# Install script for directory: /home/xiaoc/xiaoc/code/tool_practice/eigen_practice/ReadTrajectory/src
+# Install script for directory: /home/ypc/xiaoc/code/slam_tool_practice/eigen_practice/ReadTrajectory/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
