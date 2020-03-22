@@ -7,8 +7,9 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 find_package(PCL 1.6.0 REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
-link_libraries(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
+link_libraries(${PCL_LIBRARY_DIRS})
+
 
 add_executable(ReadPointsFromPCD ${PROJECT_SOURCE_DIR}/src/ReadPointsFromPCD.cpp)
 target_link_libraries(ReadPointsFromPCD ${PCL_LIBRARIES})

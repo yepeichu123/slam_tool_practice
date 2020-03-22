@@ -64,11 +64,11 @@ int main(int argc, char** argv) {
             pointcloud->push_back(p);
         }
     }
-    cout << "Read " << pointcloud->points.size() << " points!" << endl;
+    cout << "Read " << pointcloud->points.size() << " points!" << endl; 
 
     // 保存点云
     io::savePCDFileASCII("./data/image_pcd.pcd", *pointcloud);
-
+ 
     // 显示点云信息
     visualization::CloudViewer viewer("viewer_points");
     while (1) {
