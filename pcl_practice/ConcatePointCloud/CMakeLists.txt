@@ -13,6 +13,8 @@ include_directories(${PCL_INCLUDE_DIRS})
 link_libraries(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
+include_directories("/usr/local/include/eigen3")
+
 set(SRC_CPP ${PROJECT_SOURCE_DIR}/src/ConcatePointCloud.cpp)
 
 add_executable(ConcatePointCloud ${SRC_CPP})

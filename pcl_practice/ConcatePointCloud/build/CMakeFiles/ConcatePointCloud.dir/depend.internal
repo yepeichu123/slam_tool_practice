@@ -21,6 +21,7 @@ CMakeFiles/ConcatePointCloud.dir/src/ConcatePointCloud.cpp.o
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/core/cvdef.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/core/cvstd.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/core/cvstd.inl.hpp
+ /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/core/eigen.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/core/fast_math.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/core/hal/interface.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/core/mat.hpp
@@ -139,6 +140,8 @@ CMakeFiles/ConcatePointCloud.dir/src/ConcatePointCloud.cpp.o
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/eigen3/Eigen/Cholesky
  /usr/local/include/eigen3/Eigen/Core
+ /usr/local/include/eigen3/Eigen/Dense
+ /usr/local/include/eigen3/Eigen/Eigenvalues
  /usr/local/include/eigen3/Eigen/Geometry
  /usr/local/include/eigen3/Eigen/Householder
  /usr/local/include/eigen3/Eigen/Jacobi
@@ -279,6 +282,25 @@ CMakeFiles/ConcatePointCloud.dir/src/ConcatePointCloud.cpp.o
  /usr/local/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h
  /usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h
  /usr/local/include/eigen3/Eigen/src/Core/util/XprHelper.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/./ComplexSchur.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/./HessenbergDecomposition.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/./RealQZ.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/./RealSchur.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/./Tridiagonalization.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur_LAPACKE.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/RealSchur_LAPACKE.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver_LAPACKE.h
+ /usr/local/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h
  /usr/local/include/eigen3/Eigen/src/Geometry/AlignedBox.h
  /usr/local/include/eigen3/Eigen/src/Geometry/AngleAxis.h
  /usr/local/include/eigen3/Eigen/src/Geometry/EulerAngles.h
@@ -330,6 +352,7 @@ CMakeFiles/ConcatePointCloud.dir/src/ConcatePointCloud.cpp.o
  /usr/local/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h
  /usr/local/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  /usr/local/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
+ /usr/local/include/pcl-1.8/pcl/ModelCoefficients.h
  /usr/local/include/pcl-1.8/pcl/PCLHeader.h
  /usr/local/include/pcl-1.8/pcl/PCLImage.h
  /usr/local/include/pcl-1.8/pcl/PCLPointCloud2.h
@@ -338,16 +361,28 @@ CMakeFiles/ConcatePointCloud.dir/src/ConcatePointCloud.cpp.o
  /usr/local/include/pcl-1.8/pcl/PolygonMesh.h
  /usr/local/include/pcl-1.8/pcl/TextureMesh.h
  /usr/local/include/pcl-1.8/pcl/Vertices.h
+ /usr/local/include/pcl-1.8/pcl/cloud_iterator.h
+ /usr/local/include/pcl-1.8/pcl/common/centroid.h
+ /usr/local/include/pcl-1.8/pcl/common/colors.h
  /usr/local/include/pcl-1.8/pcl/common/concatenate.h
  /usr/local/include/pcl-1.8/pcl/common/copy_point.h
+ /usr/local/include/pcl-1.8/pcl/common/eigen.h
+ /usr/local/include/pcl-1.8/pcl/common/impl/accumulators.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/centroid.hpp
  /usr/local/include/pcl-1.8/pcl/common/impl/copy_point.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/eigen.hpp
  /usr/local/include/pcl-1.8/pcl/common/impl/io.hpp
+ /usr/local/include/pcl-1.8/pcl/common/impl/transforms.hpp
  /usr/local/include/pcl-1.8/pcl/common/io.h
  /usr/local/include/pcl-1.8/pcl/common/point_tests.h
+ /usr/local/include/pcl-1.8/pcl/common/transforms.h
  /usr/local/include/pcl-1.8/pcl/console/print.h
  /usr/local/include/pcl-1.8/pcl/conversions.h
+ /usr/local/include/pcl-1.8/pcl/correspondence.h
  /usr/local/include/pcl-1.8/pcl/exceptions.h
  /usr/local/include/pcl-1.8/pcl/for_each_type.h
+ /usr/local/include/pcl-1.8/pcl/geometry/planar_polygon.h
+ /usr/local/include/pcl-1.8/pcl/impl/cloud_iterator.hpp
  /usr/local/include/pcl-1.8/pcl/impl/pcl_base.hpp
  /usr/local/include/pcl-1.8/pcl/impl/point_types.hpp
  /usr/local/include/pcl-1.8/pcl/io/boost.h
@@ -364,3 +399,145 @@ CMakeFiles/ConcatePointCloud.dir/src/ConcatePointCloud.cpp.o
  /usr/local/include/pcl-1.8/pcl/point_traits.h
  /usr/local/include/pcl-1.8/pcl/point_types.h
  /usr/local/include/pcl-1.8/pcl/register_point_struct.h
+ /usr/local/include/pcl-1.8/pcl/visualization/area_picking_event.h
+ /usr/local/include/pcl-1.8/pcl/visualization/boost.h
+ /usr/local/include/pcl-1.8/pcl/visualization/cloud_viewer.h
+ /usr/local/include/pcl-1.8/pcl/visualization/common/actor_map.h
+ /usr/local/include/pcl-1.8/pcl/visualization/common/common.h
+ /usr/local/include/pcl-1.8/pcl/visualization/common/impl/common.hpp
+ /usr/local/include/pcl-1.8/pcl/visualization/common/impl/shapes.hpp
+ /usr/local/include/pcl-1.8/pcl/visualization/common/ren_win_interact_map.h
+ /usr/local/include/pcl-1.8/pcl/visualization/common/shapes.h
+ /usr/local/include/pcl-1.8/pcl/visualization/eigen.h
+ /usr/local/include/pcl-1.8/pcl/visualization/impl/pcl_visualizer.hpp
+ /usr/local/include/pcl-1.8/pcl/visualization/impl/point_cloud_color_handlers.hpp
+ /usr/local/include/pcl-1.8/pcl/visualization/impl/point_cloud_geometry_handlers.hpp
+ /usr/local/include/pcl-1.8/pcl/visualization/interactor_style.h
+ /usr/local/include/pcl-1.8/pcl/visualization/keyboard_event.h
+ /usr/local/include/pcl-1.8/pcl/visualization/mouse_event.h
+ /usr/local/include/pcl-1.8/pcl/visualization/pcl_visualizer.h
+ /usr/local/include/pcl-1.8/pcl/visualization/point_cloud_color_handlers.h
+ /usr/local/include/pcl-1.8/pcl/visualization/point_cloud_geometry_handlers.h
+ /usr/local/include/pcl-1.8/pcl/visualization/point_cloud_handlers.h
+ /usr/local/include/pcl-1.8/pcl/visualization/point_picking_event.h
+ /usr/local/include/vtk-7.1/vtkABI.h
+ /usr/local/include/vtk-7.1/vtkAOSDataArrayTemplate.h
+ /usr/local/include/vtk-7.1/vtkAbstractArray.h
+ /usr/local/include/vtk-7.1/vtkAbstractCellLinks.h
+ /usr/local/include/vtk-7.1/vtkAbstractMapper.h
+ /usr/local/include/vtk-7.1/vtkAbstractMapper3D.h
+ /usr/local/include/vtk-7.1/vtkActor.h
+ /usr/local/include/vtk-7.1/vtkActor2D.h
+ /usr/local/include/vtk-7.1/vtkActorCollection.h
+ /usr/local/include/vtk-7.1/vtkAlgorithm.h
+ /usr/local/include/vtk-7.1/vtkAlgorithmOutput.h
+ /usr/local/include/vtk-7.1/vtkAppendPolyData.h
+ /usr/local/include/vtk-7.1/vtkAtomic.h
+ /usr/local/include/vtk-7.1/vtkAtomicTypeConcepts.h
+ /usr/local/include/vtk-7.1/vtkAtomicTypes.h
+ /usr/local/include/vtk-7.1/vtkAutoInit.h
+ /usr/local/include/vtk-7.1/vtkBuffer.h
+ /usr/local/include/vtk-7.1/vtkCell.h
+ /usr/local/include/vtk-7.1/vtkCellArray.h
+ /usr/local/include/vtk-7.1/vtkCellData.h
+ /usr/local/include/vtk-7.1/vtkCellLinks.h
+ /usr/local/include/vtk-7.1/vtkCellType.h
+ /usr/local/include/vtk-7.1/vtkCellTypes.h
+ /usr/local/include/vtk-7.1/vtkCollection.h
+ /usr/local/include/vtk-7.1/vtkCommand.h
+ /usr/local/include/vtk-7.1/vtkCommonCoreModule.h
+ /usr/local/include/vtk-7.1/vtkCommonDataModelModule.h
+ /usr/local/include/vtk-7.1/vtkCommonExecutionModelModule.h
+ /usr/local/include/vtk-7.1/vtkCommonMathModule.h
+ /usr/local/include/vtk-7.1/vtkConfigure.h
+ /usr/local/include/vtk-7.1/vtkCoordinate.h
+ /usr/local/include/vtk-7.1/vtkDataArray.h
+ /usr/local/include/vtk-7.1/vtkDataObject.h
+ /usr/local/include/vtk-7.1/vtkDataSet.h
+ /usr/local/include/vtk-7.1/vtkDataSetAttributes.h
+ /usr/local/include/vtk-7.1/vtkDataSetMapper.h
+ /usr/local/include/vtk-7.1/vtkDataSetSurfaceFilter.h
+ /usr/local/include/vtk-7.1/vtkDebugLeaksManager.h
+ /usr/local/include/vtk-7.1/vtkFieldData.h
+ /usr/local/include/vtk-7.1/vtkFiltersCoreModule.h
+ /usr/local/include/vtk-7.1/vtkFiltersGeometryModule.h
+ /usr/local/include/vtk-7.1/vtkFiltersSourcesModule.h
+ /usr/local/include/vtk-7.1/vtkFloatArray.h
+ /usr/local/include/vtk-7.1/vtkFollower.h
+ /usr/local/include/vtk-7.1/vtkGenericDataArray.h
+ /usr/local/include/vtk-7.1/vtkGenericDataArray.txx
+ /usr/local/include/vtk-7.1/vtkGenericDataArrayLookupHelper.h
+ /usr/local/include/vtk-7.1/vtkIOStream.h
+ /usr/local/include/vtk-7.1/vtkIOStreamFwd.h
+ /usr/local/include/vtk-7.1/vtkIdList.h
+ /usr/local/include/vtk-7.1/vtkIdTypeArray.h
+ /usr/local/include/vtk-7.1/vtkImageAlgorithm.h
+ /usr/local/include/vtk-7.1/vtkIndent.h
+ /usr/local/include/vtk-7.1/vtkIntArray.h
+ /usr/local/include/vtk-7.1/vtkInteractionStyleModule.h
+ /usr/local/include/vtk-7.1/vtkInteractorObserver.h
+ /usr/local/include/vtk-7.1/vtkInteractorStyle.h
+ /usr/local/include/vtk-7.1/vtkInteractorStyleRubberBandPick.h
+ /usr/local/include/vtk-7.1/vtkInteractorStyleTrackballCamera.h
+ /usr/local/include/vtk-7.1/vtkLODActor.h
+ /usr/local/include/vtk-7.1/vtkLeaderActor2D.h
+ /usr/local/include/vtk-7.1/vtkLineSource.h
+ /usr/local/include/vtk-7.1/vtkLookupTable.h
+ /usr/local/include/vtk-7.1/vtkMapper.h
+ /usr/local/include/vtk-7.1/vtkMath.h
+ /usr/local/include/vtk-7.1/vtkMathConfigure.h
+ /usr/local/include/vtk-7.1/vtkMatrix4x4.h
+ /usr/local/include/vtk-7.1/vtkOStrStreamWrapper.h
+ /usr/local/include/vtk-7.1/vtkOStreamWrapper.h
+ /usr/local/include/vtk-7.1/vtkObject.h
+ /usr/local/include/vtk-7.1/vtkObjectBase.h
+ /usr/local/include/vtk-7.1/vtkObjectFactory.h
+ /usr/local/include/vtk-7.1/vtkPointData.h
+ /usr/local/include/vtk-7.1/vtkPointSet.h
+ /usr/local/include/vtk-7.1/vtkPoints.h
+ /usr/local/include/vtk-7.1/vtkPolyData.h
+ /usr/local/include/vtk-7.1/vtkPolyDataAlgorithm.h
+ /usr/local/include/vtk-7.1/vtkPolyDataMapper.h
+ /usr/local/include/vtk-7.1/vtkPolygon.h
+ /usr/local/include/vtk-7.1/vtkProp.h
+ /usr/local/include/vtk-7.1/vtkProp3D.h
+ /usr/local/include/vtk-7.1/vtkPropCollection.h
+ /usr/local/include/vtk-7.1/vtkProperty.h
+ /usr/local/include/vtk-7.1/vtkProperty2D.h
+ /usr/local/include/vtk-7.1/vtkRenderer.h
+ /usr/local/include/vtk-7.1/vtkRendererCollection.h
+ /usr/local/include/vtk-7.1/vtkRenderingAnnotationModule.h
+ /usr/local/include/vtk-7.1/vtkRenderingCoreModule.h
+ /usr/local/include/vtk-7.1/vtkRenderingFreeTypeModule.h
+ /usr/local/include/vtk-7.1/vtkRenderingLODModule.h
+ /usr/local/include/vtk-7.1/vtkScalarsToColors.h
+ /usr/local/include/vtk-7.1/vtkSetGet.h
+ /usr/local/include/vtk-7.1/vtkSmartPointer.h
+ /usr/local/include/vtk-7.1/vtkSmartPointerBase.h
+ /usr/local/include/vtk-7.1/vtkSphereSource.h
+ /usr/local/include/vtk-7.1/vtkStdString.h
+ /usr/local/include/vtk-7.1/vtkSystemIncludes.h
+ /usr/local/include/vtk-7.1/vtkTextProperty.h
+ /usr/local/include/vtk-7.1/vtkTexture.h
+ /usr/local/include/vtk-7.1/vtkTimeStamp.h
+ /usr/local/include/vtk-7.1/vtkType.h
+ /usr/local/include/vtk-7.1/vtkTypeTraits.h
+ /usr/local/include/vtk-7.1/vtkUnicodeString.h
+ /usr/local/include/vtk-7.1/vtkUnsignedCharArray.h
+ /usr/local/include/vtk-7.1/vtkUnstructuredGrid.h
+ /usr/local/include/vtk-7.1/vtkUnstructuredGridBase.h
+ /usr/local/include/vtk-7.1/vtkVariant.h
+ /usr/local/include/vtk-7.1/vtkVariantCast.h
+ /usr/local/include/vtk-7.1/vtkVariantInlineOperators.h
+ /usr/local/include/vtk-7.1/vtkVectorText.h
+ /usr/local/include/vtk-7.1/vtkVersion.h
+ /usr/local/include/vtk-7.1/vtkVersionMacros.h
+ /usr/local/include/vtk-7.1/vtkViewport.h
+ /usr/local/include/vtk-7.1/vtkVolume.h
+ /usr/local/include/vtk-7.1/vtkVolumeCollection.h
+ /usr/local/include/vtk-7.1/vtkWeakPointerBase.h
+ /usr/local/include/vtk-7.1/vtkWin32Header.h
+ /usr/local/include/vtk-7.1/vtkWrappingHints.h
+ /usr/local/include/vtk-7.1/vtk_kwiml.h
+ /usr/local/include/vtk-7.1/vtkkwiml/abi.h
+ /usr/local/include/vtk-7.1/vtkkwiml/int.h
