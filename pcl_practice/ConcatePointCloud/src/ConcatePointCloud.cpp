@@ -32,6 +32,8 @@ void ComputeRelativePose(const Mat &ref_img, const Mat &ref_depth, const Mat &K,
 
 void ComputeRelativePosePNP(const Mat &ref_img, const Mat &ref_depth, const float &scale, const Mat &cur_img, const Mat &K, Mat &r_vec, Mat &t_vec);
 
+PointCloud<PointXYZRGB>::Ptr getPointCloud(const Mat &rgb_img, const Mat &depth_img, const Mat &K, const float &scale);
+
 int main(int argc, char** argv) {
 
     if (argc != 2) {
@@ -39,7 +41,7 @@ int main(int argc, char** argv) {
         return 1;
     }
     string in_path = argv[1];
-    string out_file = in_path + "results.pcd";
+    string out_file = in_path + "result/results.pcd";
 
     // read images from files
     vector<Mat> rgb_img, depth_img;
@@ -50,84 +52,48 @@ int main(int argc, char** argv) {
     K = (Mat_<float>(3,3) << 518.0, 0, 325.5,
                              0, 519.0, 253.5,
                              0, 0, 1);
-    float scale = 1000.0;
-
-    vector<PointCloud<PointXYZRGB>::Ptr> cloud;
-    for (int i = 0; i <2; ++i) {
-        PointCloud<PointXYZRGB>::Ptr temp_cloud(new PointCloud<PointXYZRGB>());
-        for (int y = 0; y < rgb_img[i].rows; ++y) {
-            for (int x = 0; x < rgb_img[i].cols; ++x) {
-                ushort d = depth_img[i].ptr<ushort>(y)[x];
-                if (d == 0) {
-                    continue;
-                }
-                float z = (float)d / scale;
-                Vec3b color = rgb_img[i].ptr<Vec3b>(y)[x];
-                PointXYZRGB point;
-                point.x = (x - K.at<float>(0, 2)) * z / K.at<float>(0, 0);
-                point.y = (y - K.at<float>(1, 2)) * z / K.at<float>(1, 1);
-                point.z = z;
-                point.r = color[2];
-                point.g = color[1];
-                point.b = color[0];
-                temp_cloud->push_back(point);
-            }
-        }
-        cout << i << " : " << temp_cloud->size() << endl;
-        cloud.push_back(temp_cloud);
-    }
+    float scale = 1000.0;   
 
     Eigen::Isometry3f T_rw = Eigen::Isometry3f::Identity();
-    Eigen::Isometry3f T_cw_;
+    PointCloud<PointXYZRGB>::Ptr cloud_1 = getPointCloud(rgb_img[0], depth_img[0], K, scale);
+    PointCloud<PointXYZRGB>::Ptr ref_cloud(new PointCloud<PointXYZRGB>());
+    transformPointCloud(*cloud_1, *ref_cloud, T_rw.matrix());
 
-    // PointCloud<PointXYZRGB>::Ptr total_cloud(new PointCloud<PointXYZRGB>());
-    // transformPointCloud(*cloud[0], *total_cloud, T_rw.matrix());
+    for (int i = 1; i < rgb_img.size(); ++i) {
+        Mat ref_img = rgb_img[i-1];
+        Mat ref_img_depth = depth_img[i-1];
+        Mat cur_img = rgb_img[i];
+        Mat cur_img_depth = depth_img[i];
 
-    Mat ref_img = rgb_img[0];
-    Mat ref_img_depth = depth_img[0];
-    Mat cur_img = rgb_img[1];
+        Mat r_vec, t_vec;
+        ComputeRelativePosePNP(ref_img, ref_img_depth, scale, cur_img, K, r_vec, t_vec);
+        Mat R_cr;
+        Rodrigues(r_vec, R_cr);
+        Eigen::Matrix3f r_cr;
+        cv2eigen(R_cr, r_cr);
+        Eigen::Isometry3f T_cr;
+        Eigen::AngleAxisf angle(r_cr);
+        T_cr = angle;
+        T_cr(0, 3) = t_vec.at<float>(0);
+        T_cr(1, 3) = t_vec.at<float>(1);
+        T_cr(2, 3) = t_vec.at<float>(2);
+        PointCloud<PointXYZRGB>::Ptr out_cloud(new PointCloud<PointXYZRGB>());
+        PointCloud<PointXYZRGB>::Ptr cloud_cur = getPointCloud(cur_img, cur_img_depth, K, scale);
+        transformPointCloud(*ref_cloud, *out_cloud, T_cr.matrix());
+        *cloud_cur += *out_cloud;
 
-    Mat r_vec, t_vec;
-    ComputeRelativePosePNP(ref_img, ref_img_depth, scale, cur_img, K, r_vec, t_vec);
+        ref_cloud = cloud_cur;
+    }
 
-    Mat R;
-    Rodrigues(r_vec, R);
-    Eigen::Matrix3f r;
-    cv2eigen(R, r);
-
-    Eigen::Isometry3f T_cr_;
-    Eigen::AngleAxisf angle(r);
-    T_cr_ = angle;
-    T_cr_(0, 3) = t_vec.at<float>(0,0);
-    T_cr_(1, 3) = t_vec.at<float>(0,1);
-    T_cr_(2, 3) = t_vec.at<float>(0,2);
-    // T_cw_ = T_rw * T_cr_;
-    // T_rw = T_cw_;
-    cout << T_cr_.matrix() << endl;
-    PointCloud<PointXYZRGB>::Ptr out_cloud(new PointCloud<PointXYZRGB>());
-    transformPointCloud(*cloud[0], *out_cloud, T_cr_.matrix());
-    *out_cloud += *cloud[1];
+    io::savePCDFileASCII(out_file, *ref_cloud);
 
     visualization::CloudViewer viewer("CloudViewer");
-    viewer.showCloud(out_cloud);
-    while ((1))
+    viewer.showCloud(ref_cloud);
+    while (!viewer.wasStopped())
     {
         /* code */
     }
     
-
-    /*
-    Mat img1 = rgb_img[0];
-    Mat img1_depth = depth_img[0];
-    Mat img2 = rgb_img[1];
-    Mat T;
-    cout << "Enter ComputeRelativePose!" << endl;
-    ComputeRelativePose(img1, img2, K, T);
-
-    cout << "Enter ComputeRelativePosePNP!" << endl;
-    Mat T2;
-    ComputeRelativePosePNP(img1, img1_depth, scale, img2, K, T2);
-    */
     return 0;
 }
 
@@ -291,12 +257,11 @@ void ComputeRelativePosePNP(const Mat &ref_img, const Mat &ref_depth, const floa
         Point2f ref_p = ref_kpt[good_matches[i].queryIdx].pt;
         Point2f cur_p = cur_kpt[good_matches[i].trainIdx].pt;
         // check depth 
-        ushort d = ref_depth.at<ushort>(ref_p.y, ref_p.x) / scale;
+        ushort d = ref_depth.at<ushort>(ref_p.y, ref_p.x);
         if (d == 0) {
             continue;
         }
-        // float z = (float)d / scale;
-        float z = d;
+        float z = d / scale;
         ref_pixel.push_back(ref_p);
         cur_pixel.push_back(cur_p);
 
@@ -316,13 +281,14 @@ void ComputeRelativePosePNP(const Mat &ref_img, const Mat &ref_depth, const floa
     cout << "There are " << ref_cam.size() << " valuable matching pairs!" << endl;
 
     // find essential matrix 
-    solvePnPRansac(ref_cam, cur_pixel, K, Mat(), r_vec, t_vec);
+    solvePnPRansac(ref_cam, cur_pixel, K, Mat(), r_vec, t_vec, false, 100, 1.0, 0.999);
     Mat R;
     Rodrigues(r_vec, R);
 
     Mat new_t, new_R;
     t_vec.convertTo(new_t, CV_32F);    
     R.convertTo(new_R, CV_32F);
+    t_vec = new_t;
 
     // check error 
     float err = 0;
@@ -347,4 +313,36 @@ void ComputeRelativePosePNP(const Mat &ref_img, const Mat &ref_depth, const floa
     new_R.rowRange(0,3).colRange(0,3).copyTo(T_rc(Rect(0,0,3,3)));
     new_t.rowRange(0,3).copyTo(T_rc(Rect(3,0,1,3)));
     cout << "T_rc = " << T_rc << endl;
+}
+
+PointCloud<PointXYZRGB>::Ptr getPointCloud(const Mat &rgb_img, const Mat &depth_img, const Mat &K, const float &scale) {
+    if (rgb_img.empty() || depth_img.empty()) {
+        cout << "error images!" << endl;
+        return nullptr;
+    }
+
+    PointCloud<PointXYZRGB>::Ptr cloud(new PointCloud<PointXYZRGB>());
+    for (int y = 0; y < rgb_img.rows; ++y) {
+        for (int x = 0; x < rgb_img.cols; ++x) {
+            ushort d = depth_img.ptr<ushort>(y)[x];
+            if (d == 0) {
+                continue;
+            }
+            float z = (float)d / scale;
+            Vec3b color = rgb_img.ptr<Vec3b>(y)[x];
+            PointXYZRGB point;
+            point.x = (x - K.at<float>(0, 2)) * z / K.at<float>(0, 0);
+            point.y = (y - K.at<float>(1, 2)) * z / K.at<float>(1, 1);
+            point.z = z;
+            point.r = color[2];
+            point.g = color[1];
+            point.b = color[0];
+            cloud->points.push_back(point);
+        }
+    }
+	cloud->height = 1;
+	cloud->width = cloud->points.size();
+	cloud->is_dense = false;
+
+    return cloud;
 }
