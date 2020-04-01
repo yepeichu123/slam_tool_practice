@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ypc/xiaoc/code/slam_tool_practice/new_cpp/coding_interviews/3_Array/main.cpp
+iostream
+-
+cstring
+-
+
