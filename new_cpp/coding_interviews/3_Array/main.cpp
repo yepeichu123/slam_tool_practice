@@ -13,7 +13,11 @@ int GetSize(int data[]) {
     return sizeof(data);
 }
 
+// part 2
 bool duplicate(int number[], int length, int& duplication) {
+
+    cout << "Enter function duplicate!" << endl;
+
     // 第一步需要确保输入数组和长度有效
     if (number == nullptr || length <= 0) {
         cout << "Sorry, you input the empty array!" << endl;
@@ -52,6 +56,59 @@ bool duplicate(int number[], int length, int& duplication) {
     return false;
 }
 
+// part 3
+bool duplicateWithoudChangeArray(const int number[], int length, int& duplication) {
+
+    cout << "Enter function duplicateWithoudChangeArray!" << endl;
+
+    // 第一步检查数组和长度是否有效
+    if (number == nullptr || length <= 0) {
+        cout << "empty number array or invalid length!" << endl;
+        return false;
+    }
+
+    // 第二步检查数组是否超过长度
+    for (int i = 0; i < length; ++i) {
+        if (number[i] <= 0 || number[i] > length-1) {
+            cout << "number array is out of range!" << endl;
+            return false;
+        }
+    }
+
+    // 第三步常规查找重复数值
+    /*
+    for (int i = 0; i < length; ++i) {
+        for (int j = i+1; j < length; ++j) {
+            if (number[i] == number[j]) {
+                duplication = number[i];
+                cout << "We find the repeated number : " << duplication << endl;
+                return true;
+            }
+        }
+    }*/
+
+    int start = 1;
+    int end = length - 1;
+    while (start < end) {
+        int middle = (length + start) / 2;
+        int count = 0;
+        for (int i = start; i <= end; ++i) {
+            if (number[i] <= middle) {
+                ++count;
+            }
+            if (count > middle) {
+                end = middle; 
+            }
+            else {
+                start = middle+1;
+            }
+        }
+    }
+    duplication = start;
+    cout << "We find the repeated number : " << duplication << endl;
+    return true;
+}
+
 int main() {
 
     // part 1
@@ -84,6 +141,14 @@ int main() {
     int leng3 = sizeof(number3) / sizeof(number3[0]);
     if (duplicate(number3, leng3, repeat_num)) {
         cout << "We found the repeated number : " << repeat_num3 << endl;
+    }
+
+    // part 3
+    int repeat_num4;
+    int number4[] = {5, 2, 3, 7, 1, 4, 6, 3};
+    int leng4 = sizeof(number4) / sizeof(number4[0]);
+    if (duplicateWithoudChangeArray(number4, leng4, repeat_num4)) {
+        cout << "We found the repeated number : " << repeat_num4 << endl;
     }
 
     return 0;
