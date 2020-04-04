@@ -46,6 +46,7 @@ int main(int argc, char** argv) {
             g2o::make_unique<MyLinearSolver>()
         )
     );
+    
     // sparse optimization
     g2o::SparseOptimizer optimizer;
     optimizer.setAlgorithm(solver);

@@ -4,7 +4,7 @@ project(curve_fit)
 set(CMAKE_CXX_FLAGS "-std=c++11")
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
-include_directories(/usr/include/eigen3/)
+include_directories("/usr/local/include/eigen3")
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 

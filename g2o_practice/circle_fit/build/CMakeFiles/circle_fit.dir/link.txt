@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -O3 -DNDEBUG  -rdynamic CMakeFiles/circle_fit.dir/src/main.cpp.o CMakeFiles/circle_fit.dir/src/circle_graph.cpp.o  -o ../bin/circle_fit -lg2o_core -lg2o_stuff -lg2o_solver_csparse -lg2o_csparse_extension -lcxsparse 
