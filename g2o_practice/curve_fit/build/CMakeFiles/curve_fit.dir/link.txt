@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11  -rdynamic CMakeFiles/curve_fit.dir/src/main.cpp.o CMakeFiles/curve_fit.dir/src/curve_graph.cpp.o  -o ../bin/curve_fit -lg2o_core -lg2o_stuff -lcxsparse 
