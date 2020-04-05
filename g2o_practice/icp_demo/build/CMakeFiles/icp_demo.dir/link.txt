@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -O3 -DNDEBUG  -rdynamic CMakeFiles/icp_demo.dir/src/main.cpp.o  -o ../bin/icp_demo -lg2o_core -lg2o_stuff -lg2o_csparse_extension -lg2o_types_slam3d -lg2o_types_icp -lcxsparse 
