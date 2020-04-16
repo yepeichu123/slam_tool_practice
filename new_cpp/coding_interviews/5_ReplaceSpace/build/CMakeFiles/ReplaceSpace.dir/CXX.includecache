@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ypc/xiaoc/code/slam_tool_practice/new_cpp/coding_interviews/5_ReplaceSpace/main.cpp
+iostream
+-
+
