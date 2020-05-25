@@ -21,8 +21,12 @@ int main(int argc, char** argv) {
     // read images and camera intrinsics
     Mat left = imread(argv[1], IMREAD_GRAYSCALE);
     Mat right = imread(argv[2], IMREAD_GRAYSCALE);
-    Mat K = (Mat_<float>(3, 3) << 718.856, 0, 607.1928, 0, 718.856, 185.2157, 0, 0, 1);
-    float baseline = 0.537150653267924;
+    // kitti
+    // Mat K = (Mat_<float>(3, 3) << 718.856, 0, 607.1928, 0, 718.856, 185.2157, 0, 0, 1);
+    // float baseline = 0.537150653267924;
+    // eurco
+    Mat K = (Mat_<float>(3, 3) << 458.654, 0, 367.215, 0, 457.296, 248.375, 0, 0, 1);
+    float baseline = 0.11007;
     float bf = baseline * K.at<float>(0, 0);
     cout << "bf = " << bf << endl;
     if (left.empty() || right.empty()) {
@@ -53,6 +57,9 @@ bool SBMStereoMatching(const Mat& left, const Mat& right, const float& bf, Mat& 
     if (left.empty() || right.empty() || bf == 0) {
         return false;
     }
+    
+    // parameters for kitti:
+    // (16,9), 9, 31, 9, 0, 64, 10, 15, 100, 32, 1, 
 
     // stereoBM 构造函数
     Ptr<StereoBM> sbm = StereoBM::create(16, 9);
@@ -117,6 +124,9 @@ bool SGBMStereoMatching(const Mat& left, const Mat& right, const float& bf, Mat&
         return false;
     }
     
+    // parameters for kitti:
+    // 0, 64, 5, 31, 8, 32, 15, 100, 32, 1, 1
+
     int minDisparity = 0;
     int numOfDisparities = 64;
     int blockSize = 5;

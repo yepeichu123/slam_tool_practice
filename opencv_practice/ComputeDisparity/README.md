@@ -9,5 +9,3 @@
 4. [OpenCV三种立体匹配求视差图算法总结](https://blog.csdn.net/wqvbjhc/article/details/6260844#)
 
 5. [双目视觉---opencv中立体匹配相关代码](https://blog.csdn.net/u010368556/article/details/72431377)
-
-6. 
