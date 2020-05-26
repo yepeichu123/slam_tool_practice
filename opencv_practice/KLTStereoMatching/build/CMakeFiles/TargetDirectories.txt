@@ -1,3 +1,0 @@
-/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/KLTStereoMatching/build/CMakeFiles/rebuild_cache.dir
-/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/KLTStereoMatching/build/CMakeFiles/edit_cache.dir
-/home/ypc/xiaoc/code/slam_tool_practice/opencv_practice/KLTStereoMatching/build/CMakeFiles/KLTStereoMatching.dir
