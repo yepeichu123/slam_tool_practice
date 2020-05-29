@@ -132,14 +132,17 @@ bool trackEuroc(vector<Mat>& left_img, vector<Mat>& right_img, const double& bf,
         vector<Point2f> points[2];
 
         // extract points
-        vector<KeyPoint> kpts;
-        Mat desp;
-        Ptr<ORB> orb = ORB::create(1200);
-        orb->detectAndCompute(left, Mat(), kpts, desp);
-        // convert00
-        for (int i = 0; i < kpts.size(); ++i) {
-            points[0].push_back(kpts[i].pt);
-        }
+        // vector<KeyPoint> kpts;
+        // Mat desp;
+        // Ptr<ORB> orb = ORB::create(1200);
+        // orb->detectAndCompute(left, Mat(), kpts, desp);
+        TermCriteria termcrit(TermCriteria::COUNT|TermCriteria::EPS,20,0.03);
+        goodFeaturesToTrack(left, points[0], 1200, 0.01, 10);
+        cornerSubPix(left, points[0], Size(10,10), Size(-1,-1), termcrit);
+        // convert
+        // for (int i = 0; i < kpts.size(); ++i) {
+            // points[0].push_back(kpts[i].pt);
+        // }
         cout << "we extract " << points[0].size() << " points." << endl;
 
         vector<uchar> state;
@@ -160,13 +163,15 @@ bool trackEuroc(vector<Mat>& left_img, vector<Mat>& right_img, const double& bf,
 
             Point2f start = points[0][i];
             Point2f end = Point2f(points[1][i].x + left.cols, points[1][i].y);
-            line(draw_match, start, end, Scalar(125, 0, 125));
+            circle(draw_match, start, 5, Scalar(125, 255, 125), 2);
+            circle(draw_match, end, 5, Scalar(125, 255, 125), 2);
+            line(draw_match, start, end, Scalar(125, 0, 125), 2);
 
             // make depth image
             float d = points[0][i].x - points[1][i].x;
-            if (d >= 0) {
-                continue;
-            }
+            // if (d >= 0) {
+                // continue;
+            // }
 
             new_points[0].push_back(points[0][i]);
             new_points[1].push_back(points[1][i]);
@@ -193,7 +198,7 @@ bool trackEuroc(vector<Mat>& left_img, vector<Mat>& right_img, const double& bf,
             waitKey(1);
         }
         ++count;
-
+        /*
         if (left_final.size() == 0) {
             bool flag = ComputeDepthByNCCNew(left, right, bf, points[0], points[1]);
             if (flag) {
@@ -209,6 +214,7 @@ bool trackEuroc(vector<Mat>& left_img, vector<Mat>& right_img, const double& bf,
                 cout << "Oh shit, we cannot match any points." << endl;
             }
         }
+        */
     }
     out.close();
     return true;
