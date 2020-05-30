@@ -2,13 +2,16 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <opencv2/opencv.hpp>
 
 using namespace std;
 using namespace cv;
 
-string dataset = "MH_01_easy";
+string dataset = "MH_05_difficult";
 string data_path = "/home/ypc/xiaoc/dataset/EUROC/";
+string output_data_path = "/home/ypc/xiaoc/dataset/EUROC/";
 Mat K_l, K_r, D_l, D_r, P_l, P_r, R_l, R_r;
 
 bool loadCameraParams(Mat& K_left, Mat& K_right, Mat& D_left, Mat& D_right,
@@ -17,6 +20,8 @@ bool loadCameraParams(Mat& K_left, Mat& K_right, Mat& D_left, Mat& D_right,
 bool readEurocData(const string& filename_left, const string& filename_right, vector<Mat>& left_img, vector<Mat>& right_img);
 
 bool undistortAndRemap(const vector<Mat>& left_input, const vector<Mat>& right_input, vector<Mat>& left_output, vector<Mat>& right_output);
+
+bool writeEurocData(const string& filename_left, const string& filename_right, vector<Mat>& left_img, vector<Mat>& right_img);
 
 int main(int argc, char* argv[]) {
 
@@ -36,16 +41,29 @@ int main(int argc, char* argv[]) {
     flag = readEurocData(leftFile, rightFile, vLeftImg, vRightImg);
     if (flag && vLeftImg.size() > 0) {
         imshow("FirstOneImage", vLeftImg[0]);
-        waitKey(0);
+        waitKey(1);
+    }
+    else {
+        cout << "Failed to read euroc images." << endl;
+        return -1;
     }
 
     vector<Mat> vLeftImgRect, vRightImgRect;
     flag = undistortAndRemap(vLeftImg, vRightImg, vLeftImgRect, vRightImgRect);
     if (flag && vLeftImg.size() > 0) {
         imshow("FirstOneImageRect", vLeftImgRect[0]);
-        waitKey(0);
+        waitKey(1);
+    }
+    else {
+        cout << "Failed to undistort and remap images." << endl;
+        return -1;
     }
 
+    flag = writeEurocData(leftFile, rightFile, vLeftImgRect, vRightImgRect);
+    if (flag) {
+        cout << "Wow, you can really dance." << endl;
+    }
+    
     return 0;
 }
 
@@ -108,7 +126,7 @@ bool readEurocData(const string& filename_left, const string& filename_right, ve
     string left_s, right_s;
     getline(left_file, left_s);
     getline(right_file, right_s);
-    while (!left_file.eof() || !right_file.eof()) {
+    while (!left_file.eof() && !right_file.eof()) {
         string l_path = path + "cam0/data/" + left_s;
         string r_path = path + "cam1/data/" + right_s;
         cout << "l_path = " << l_path << endl;
@@ -125,9 +143,10 @@ bool readEurocData(const string& filename_left, const string& filename_right, ve
         getline(left_file, left_s);
         getline(right_file, right_s);
 
-        if (++count > 100) {
-            break;
-        }
+        // limit frames
+        // if (++count > 100) {
+            // break;
+        // }
     }
 
     cout << "Ok, we read " << left_img.size() << " images." << endl;
@@ -163,3 +182,46 @@ bool undistortAndRemap(const vector<Mat>& left_input, const vector<Mat>& right_i
     cout << "OK, we have finished the pre-proccessing. All images are undistorted and remapped." << endl;
     return left_output.size() > 0 ? true : false; 
 }
+
+bool writeEurocData(const string& filename_left, const string& filename_right, vector<Mat>& left_img, vector<Mat>& right_img) {
+    if (left_img.size() == 0 || left_img.size() != right_img.size()) {
+        cout << "No images to write out or no equal images size." << endl;
+        return false;
+    }
+
+    string out_path_left = output_data_path + dataset + "/rect/cam0/data/";
+    string out_path_right = output_data_path + dataset + "/rect/cam1/data/";
+
+    ifstream left_file(filename_left);
+    ifstream right_file(filename_right);
+    if (!left_file.is_open() || !right_file.is_open()) {
+        cout << "Failed to open files." << endl;
+        return false;
+    }
+
+    string left, right;
+    getline(left_file, left);
+    getline(right_file, right);
+    int count = 0;
+    while (!left_file.eof() && !right_file.eof()) {
+        string left_path = out_path_left + left;
+        string right_path = out_path_right + right;
+        if (count >= left_img.size() || count >= right_img.size()) {
+            cout << "No equal size of files and images." << endl;
+            return false;
+        }
+        cout << "write to " << left_path << endl;
+        cout << "write to " << right_path << endl;
+        Mat l_img = left_img[count];
+        Mat r_img = right_img[count];
+        imwrite(left_path, l_img);
+        imwrite(right_path, r_img);
+
+        ++count;
+        getline(left_file, left);
+        getline(right_file, right);
+    }
+    cout << "Ok, we finished write " << count << " images to " << out_path_left << " and " << out_path_right << endl;
+    return true;
+}
+
