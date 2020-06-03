@@ -22,16 +22,19 @@ int main(int argc, char** argv) {
     }
 
     // 读取图像以及显示图像
-    Mat rgb = imread(argv[1], IMREAD_COLOR);
-    Mat depth = imread(argv[2], IMREAD_GRAYSCALE);
+    Mat rgb = imread(argv[1], CV_LOAD_IMAGE_UNCHANGED);
+    Mat depth = imread(argv[2], CV_LOAD_IMAGE_UNCHANGED);
     imshow("rgb_img", rgb);
     waitKey(0);
-
+    
+    cout << "depth image type is : " << depth.type() << endl;
     // 相机内参数
     double fx = 525.0, fy = 525.0;
     double cx = 319.5, cy = 239.5;
-    double scale = 5000.0;
+    double scale = 1.0 / 5000.0;
 
+    depth.convertTo(depth, CV_32F, scale);
+    cout << "depth image type is : " << depth.type() << endl;
     // 创建点云数据结构
     PointCloud<PointXYZRGB>::Ptr pointcloud(new PointCloud<PointXYZRGB>());
     int row = rgb.rows;
@@ -45,11 +48,13 @@ int main(int argc, char** argv) {
             r = rgb.at<Vec3b>(i, j)[2];
 
             // 读取深度信息及重建三维位置
-            ushort d = depth.at<ushort>(i, j);
+            float d = depth.at<float>(i, j);
+            // cout << d << ", ";
             if (d <= 0) {
                 continue;
             }
-            double z = d / scale;
+            double z = d;
+            cout << z << ", "; 
             double x = (j - cx) * z / fx;
             double y = (i - cy) * z / fy;
             
@@ -63,7 +68,9 @@ int main(int argc, char** argv) {
             p.b = b;
             pointcloud->push_back(p);
         }
+        cout << endl;
     }
+    cout << endl;
     cout << "Read " << pointcloud->points.size() << " points!" << endl; 
 
     // 保存点云
